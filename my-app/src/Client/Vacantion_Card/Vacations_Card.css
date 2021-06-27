@@ -1,0 +1,21 @@
+.Vacation_Card {
+  width: 18rem;
+  height: 20rem;
+  margin: 1rem;
+  border: 1px solid white;
+  background-color: lightgray;
+  opacity: 90%;
+}
+
+.Vacation_Card > img {
+  height: 10rem;
+  width: 18rem;
+}
+
+.Vacation_Card > label {
+  font-size: 1.1rem;
+}
+
+.Vacation_Card:hover {
+  box-shadow: whitesmoke 1px 1px 1px 3px ;
+}

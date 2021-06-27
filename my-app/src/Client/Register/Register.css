@@ -1,0 +1,16 @@
+.Register {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 1px solid black;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  box-shadow: grey 0.5rem 0.5rem 0.5rem;
+}
+
+.item_form_div {
+  margin-bottom: 1rem;
+}
+input {
+  text-align: center;
+}
