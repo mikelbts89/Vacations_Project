@@ -9,9 +9,10 @@ const set = (key, value) => {
 };
 
 const extractUserDataFromCache = (request) => {
-  let authorizationString = request.headers['authorization'];
-  let token = authorizationString.substring('Bearer '.length);
-  let userData = usersCache.get(token);
+  let authorizationString = request.headers["authorization"];
+  let token = authorizationString.substring("Bearer ".length);
+  console.log(token);
+  let userData = get(token);
   return userData;
 };
 

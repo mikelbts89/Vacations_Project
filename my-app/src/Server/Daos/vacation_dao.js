@@ -35,9 +35,9 @@ async function getVacationById(vacationId) {
   return currentVacation;
 }
 
-async function updateVacationById(vacationId, vacationDataToUpdate) {
+async function updateVacationById(vacationId,vacationDataToUpdate) {
   let sql =
-    "UPDATE vacations SET description=?, destination=?, image=?, start_date=?, end_date=?, price=?, where id=? ";
+    "UPDATE vacations SET description=?, destination=?, image=?, start_date=?, end_date=?, price=? where id=? ";
   let parameters = [
     vacationDataToUpdate.description,
     vacationDataToUpdate.destination,
@@ -47,14 +47,14 @@ async function updateVacationById(vacationId, vacationDataToUpdate) {
     vacationDataToUpdate.price,
     vacationId,
   ];
+  console.log(parameters);
   await connection.executeWithParameters(sql, parameters);
 }
 
 async function deleteVacationById(vacationId) {
-    let sql = "delete from vacations where id=?";
-    let parameters = [vacationId]
-    await connection.executeWithParameters(sql,parameters)
-
+  let sql = "delete from vacations where id=?";
+  let parameters = [vacationId];
+  await connection.executeWithParameters(sql, parameters);
 }
 
 module.exports = {
@@ -64,7 +64,6 @@ module.exports = {
   updateVacationById,
   deleteVacationById,
 };
-
 
 // "description":"happy Hanukah",
 // "destination":"Moscow",

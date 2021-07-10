@@ -1,7 +1,7 @@
 const express = require("express");
 const usersLogic = require("../Logics/user_logic");
 const router = express.Router();
-
+const cashModule = require("../cashModule");
 
 router.post("/", async (req, res) => {
   try {
@@ -68,6 +68,18 @@ router.post("/login", async (req, res) => {
     res.send(userData);
   } catch (err) {
     res.send(err.message);
+  }
+});
+
+router.post("/follow", async (req, res) => {
+  try {
+    const vacationId = req.body;
+    console.log(vacationId);
+    console.log("user Controller");
+    const userData = await cashModule.extractUserDataFromCache(req);
+    console.log("User ID : ", userData.id, "Vacation ID :", vacationId);
+  } catch (err) {
+    console.log(err.message);
   }
 });
 

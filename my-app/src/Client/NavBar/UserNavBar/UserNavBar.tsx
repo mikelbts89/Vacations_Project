@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink, useHistory } from 'react-router-dom'
+import { Link, NavLink, useHistory } from 'react-router-dom'
 import { AppState } from '../../Redux/app_state'
 import logo from '../../Images/logo.png'
 
@@ -30,7 +30,7 @@ function UserNavBar() {
                     dispatch({ type: ActionType.userRole, payload: { userRole: "" } })
                 }} >Log Out</button>
             </div>
-            {admin && <div className="Btn_div adminView" ><button>Add Vacation</button></div>}
+            {admin && <div className="Btn_div adminView" ><Link to={'/vacations/add'} ><button>Add Vacation</button></Link></div>}
             <div className="Name_div">
                 <h1><span className="Name_span">Hi </span>{currentUserName || userName}</h1>
             </div>

@@ -4,7 +4,8 @@ import Landing_Page from '../Landing_Page/Landing_Page'
 import Login from '../Login/Login'
 import Register from '../Register/Register'
 import Main_Page from '../Main_Page/Main_Page'
-import EditVacation from '../Admin_View/EditVacation'
+import EditVacation from '../Admin_View/EditVacation/EditVacation'
+import AddVacation from '../Admin_View/AddVacation/AddVacation'
 function Routing(): JSX.Element {
     return (
         <div>
@@ -23,6 +24,9 @@ function Routing(): JSX.Element {
                 </Route>
                 <Route exact path="/vacations/edit/:id">
                     <EditVacation />
+                </Route>
+                <Route exact path='/vacations/add'>
+                    <AddVacation />
                 </Route>
             </Switch>
         </div>
