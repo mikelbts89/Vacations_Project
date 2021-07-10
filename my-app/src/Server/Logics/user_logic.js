@@ -70,7 +70,11 @@ async function login(userLoginData) {
 
   cashModule.set(jwtToken, userData);
   console.log(userData);
-  const successfullLogined = { token: jwtToken, isAdmin: userData.is_admin };
+  const successfullLogined = {
+    token: jwtToken,
+    userRole: userData.user_role,
+    userName: userData.user_name,
+  };
   return successfullLogined;
 }
 

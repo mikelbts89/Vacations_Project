@@ -6,6 +6,8 @@ export function reduce(
   oldAppState: AppState = {
     vacantionState: [],
     filteredVacations: [],
+    currentUserName: "",
+    currentAdminStatus: "",
   },
   action: Action
 ): AppState {
@@ -18,6 +20,11 @@ export function reduce(
     case ActionType.SetFilteredState:
       newAppState.filteredVacations = action.payload.filteredVacations;
       break;
+    case ActionType.SetCurrentUserName:
+      newAppState.currentUserName = action.payload.currentUserName;
+      break;
+    case ActionType.userRole:
+      newAppState.currentAdminStatus = action.payload.userRole;
   }
 
   return newAppState;

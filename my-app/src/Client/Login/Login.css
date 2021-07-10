@@ -14,3 +14,8 @@
 input {
   text-align: center;
 }
+
+.item_form_div > span {
+  color: red;
+  opacity: 50%;
+}

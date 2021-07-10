@@ -27,8 +27,3 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 } */
-
-span {
-  color: red;
-  opacity: 50%;
-}

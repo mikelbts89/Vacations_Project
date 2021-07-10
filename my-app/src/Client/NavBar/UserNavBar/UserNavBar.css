@@ -1,0 +1,24 @@
+.UserNavBar > div {
+  color: #7d5a50;
+  /* border: 3px solid black; */
+  display: flex;
+}
+
+.Name_div {
+  display: inline;
+  float: right;
+}
+.Btn_div {
+  display: inline;
+}
+
+.Name_span {
+  font-size: 1.5rem;
+  color: #5f2c1e;
+}
+
+.Btn_div > button {
+  height: 2rem;
+  width: 5rem;
+  border-radius: 5px ;
+}

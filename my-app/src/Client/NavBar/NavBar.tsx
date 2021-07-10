@@ -5,6 +5,8 @@ import { AppState } from '../Redux/app_state'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { ActionType } from '../Redux/action_type'
+import { NavLink } from "react-router-dom";
+
 
 function NavBar() {
 
@@ -17,7 +19,7 @@ function NavBar() {
         setInputValue(searchValue)
     }
 
-    const filteredVacations = vacationsState.filter((vacation: { destination: string }) => { return vacation.destination.toLowerCase().includes(inputValue) })
+    const filteredVacations = vacationsState?.filter((vacation: { destination: string }) => { return vacation.destination.toLowerCase().includes(inputValue) })
     dispatch({ type: ActionType.SetFilteredState, payload: { filteredVacations } })
 
 
@@ -31,8 +33,8 @@ function NavBar() {
             </div>
             <div className="Btn_div">
                 <label htmlFor="">Travel to </label>  <input onChange={(e) => { setSearchValue(e) }} placeholder="Choose you destination" type="text" id="search_text" />
-                <label htmlFor="">Login</label>
-                <label htmlFor="">Register</label>
+                <NavLink className="navBar_link" style={{ textDecoration: "none" }} to="/login">Login</NavLink>
+                <NavLink className="navBar_link" style={{ textDecoration: "none" }} to="/register">Register</NavLink>
             </div>
             <div className="Hr_div">
                 <hr />

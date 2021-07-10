@@ -17,7 +17,7 @@
   grid-column: span 12;
 }
 .App > header {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   grid-column: span 12;
 }

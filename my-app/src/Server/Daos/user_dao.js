@@ -72,7 +72,7 @@ async function updateUser(userId, userDetails) {
   let parameters = [
     userDetails.userName,
     userDetails.password,
-    userDetails.isAdmin,
+    userDetails.userRole,
     userId,
   ];
   console.log(parameters);
@@ -98,6 +98,6 @@ module.exports = {
 
 // "userName":"ASD",
 // "password":"1234",
-// "isAdmin":false
+// "userRole":Admin / Costumer
 
 /////////////////////////
